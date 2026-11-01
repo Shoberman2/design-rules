@@ -5,7 +5,7 @@ These are **Spencer Hoberman's** design rules. Read this first so you know whose
 ## Spencer
 
 - Founder of **SparkTech Studios, Inc.** (Delaware C corp), a studio that builds AI-powered web apps, MVPs and professional-services sites, and runs its own portfolio of products.
-- A college student (economics and data science) building several startups at once. UTern is the flagship and is going through YC.
+- A college student (economics and data science) building several startups at once. UTern is the flagship (applying to YC W27).
 - Builds almost everything with AI coding agents (Claude Code, Codex and Grok Bot), often several in parallel on different projects. These rules exist so every agent produces work that looks like the same team made it.
 - Works fast and hands-off. Gives feedback by looking at the live result or screenshots ("open it for me"), usually as a list of short, direct changes. Expects only the requested changes to be made and everything else left alone.
 - Taste in one line: very simple, clean, professional, "Apple/Linear-grade". The fastest way to lose Spencer is anything that looks generic or AI-made.
