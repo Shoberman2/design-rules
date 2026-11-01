@@ -1,15 +1,17 @@
 ---
 name: spencer-web-style
-description: Spencer's house design standard for every website, landing page, web app and UI he builds (UTern, Leed, BallotWatch, Validate, SparkTech and anything new). Load BEFORE designing, styling, redesigning or reviewing any web page, choosing fonts/colors, writing landing-page copy, or running gstack design skills (/design-consultation, /design-html, /design-review, /design-shotgun, /plan-design-review). This standard overrides generic design-skill defaults.
+description: Spencer's house design standard for every website, landing page, web app and UI Spencer builds (UTern, Leed, BallotWatch, Validate, SparkTech and anything new). Load BEFORE designing, styling, redesigning or reviewing any web page, choosing fonts/colors, writing landing-page copy, or running gstack design skills (/design-consultation, /design-html, /design-review, /design-shotgun, /plan-design-review). This standard overrides generic design-skill defaults.
 ---
 
 # Spencer's Web Style
+
+**Read [`ABOUT.md`](../ABOUT.md) first** (who Spencer is, the products, mascots and why these rules exist).
 
 One standard, every site. A new product should look like it belongs next to UTern and Validate without anyone being told. When a gstack design skill or any other design default disagrees with this file, this file wins. A project's own DESIGN.md wins over this file only where it explicitly says so.
 
 **The feel in one line:** mostly white, near-black ink, one clean sans, huge tight centered headlines, pill buttons, lots of space, almost no words, nothing that looks AI-made. Always a great nav, clear calls to action, a live assistant in the corner, and an in-depth footer linking to real pages.
 
-He judges by one question: *does this look like a polished, mainstream, Apple/Linear-grade product site, or does it look generic and AI-generated?*
+Spencer judges by one question: *does this look like a polished, mainstream, Apple/Linear-grade product site, or does it look generic and AI-generated?*
 
 ---
 
@@ -78,7 +80,7 @@ body { font-size: 17px; line-height: 1.6; color: var(--ink-2); }
 .num { font-family: var(--mono); font-variant-numeric: tabular-nums; }
 ```
 
-- **Minimum 16px** for all body text, fine print, captions, footer links and form text. Only dense app chrome (table meta, timestamps) may go to 13px. When in doubt go bigger; he regularly says things are too small.
+- **Minimum 16px** for all body text, fine print, captions, footer links and form text. Only dense app chrome (table meta, timestamps) may go to 13px. When in doubt go bigger; Spencer regularly says things are too small.
 - Line length about 70ch max.
 
 ## 4. Alignment, shape, space, depth
@@ -187,11 +189,11 @@ The logged-in app, every interior page and the landing page share the same token
 
 ## 11. How to work with Spencer on design
 
-- **Change only what he asked.** Keep everything else pixel-identical. Edits to an existing page are tweaks, not redesigns.
+- **Change only what Spencer asked.** Keep everything else pixel-identical. Edits to an existing page are tweaks, not redesigns.
 - **"Less AI" means strip the tells in section 1 inside the current design**, not invent a new identity. Ask what specifically feels off if unclear.
-- **New designs and redesigns: show options first.** Make 2–3 distinct options as a preview (HTML mockup or dev server), open it for him, and implement only the one he picks. Small tweaks get applied directly, then shown.
+- **New designs and redesigns: show options first.** Make 2–3 distinct options as a preview (HTML mockup or dev server), open it for Spencer, and implement only the one Spencer picks. Small tweaks get applied directly, then shown.
 - Don't propose full redesigns unprompted; they usually get reverted.
-- **Check before showing.** Screenshot every changed page at 390px and 1440px and fix overlap, crowding, off-center elements, skew, items too close to edges, and unrealistic device frames before reporting done. Then open it for him.
+- **Check before showing.** Screenshot every changed page at 390px and 1440px and fix overlap, crowding, off-center elements, skew, items too close to edges, and unrealistic device frames before reporting done. Then open it for Spencer.
 - New project: write a short `DESIGN.md` derived from this file (fonts, the one accent, ground color, signature hero background, assistant mascot) plus one theme file, and log rejected ideas there so they don't return.
 - Ship with accessibility: AA contrast, 44px tap targets, visible focus ring, reduced motion.
 

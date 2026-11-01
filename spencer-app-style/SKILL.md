@@ -1,15 +1,17 @@
 ---
 name: spencer-app-style
-description: Spencer's house design standard for every app he builds (iOS/SwiftUI, Expo/React Native, and logged-in web apps/dashboards such as UTern, Perch, Budtender, ThreadFit, BallotWatch iOS, openStudy, voiceTrivia). Load BEFORE designing, styling, redesigning or reviewing any app screen, onboarding, chat UI, tab bar, app icon or dashboard. Builds on spencer-web-style, which must be loaded too.
+description: Spencer's house design standard for every app Spencer builds (iOS/SwiftUI, Expo/React Native, and logged-in web apps/dashboards such as UTern, Perch, Budtender, ThreadFit, BallotWatch iOS, openStudy, voiceTrivia). Load BEFORE designing, styling, redesigning or reviewing any app screen, onboarding, chat UI, tab bar, app icon or dashboard. Builds on spencer-web-style, which must be loaded too.
 ---
 
 # Spencer's App Style
+
+**Read [`ABOUT.md`](../ABOUT.md) first** (who Spencer is, the products, mascots and why these rules exist).
 
 **Load `spencer-web-style` first. Every rule there applies to apps too** (bans, color, type, pills, Title Case, 16px minimum, no lines as separators, no arrows in buttons, transparent logos, assistant, consistency, preview-first, check-before-showing). This file adds the app-specific rules and wins where the two differ (notably: apps always get dark mode).
 
 **The feel in one line:** a polished, native-feeling app with the website's brand: as few screens as possible, a named character to talk to, one clear action per screen, instant feedback on every tap, and a dark mode that looks as good as light.
 
-Quality bar, in his words: *"like Triumph or any other app that's been designed and looks really good."*
+Quality bar, in Spencer's words: *"like Triumph or any other app that's been designed and looks really good."*
 
 ---
 
@@ -104,7 +106,7 @@ Professional and minimal. Pipelines (candidates, tips, orders) use a board with 
 
 ## 11. Shipping
 
-- When a build is ready, open it in the iOS Simulator for him, then offer TestFlight to his phone (team ID in global CLAUDE.md).
+- When a build is ready, open it in the iOS Simulator for Spencer, then offer TestFlight to Spencer's phone (team ID in global CLAUDE.md).
 - Screenshot every changed screen in light and dark at iPhone SE and iPhone Pro Max sizes before reporting done; fix overlap, crowding, clipping and off-center items first.
 
 ## 12. App pre-ship checklist
@@ -121,4 +123,4 @@ All of the spencer-web-style checklist that applies, plus:
 - [ ] Images correctly sized, accurate, realistic; nothing repeated in feeds/recommendations.
 - [ ] Gamification choice recorded in DESIGN.md and followed.
 - [ ] Dark mode designed and checked on every screen; light mode too.
-- [ ] Opened in the simulator for him.
+- [ ] Opened in the simulator for Spencer.
