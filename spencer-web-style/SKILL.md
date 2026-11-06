@@ -15,6 +15,25 @@ Spencer judges by one question: *does this look like a polished, mainstream, App
 
 ---
 
+## 0. Sector research first
+
+Before any **new website** (client site, portfolio site, or greenfield concept), research the sector. Do this before choosing a creative direction, writing a `DESIGN.md`, or building options. Existing sites Spencer already designed do not need a full re-research for small tweaks; they do when the brief is a new site or a sector redesign.
+
+1. **Pick 4–6 leading companies** in that sector whose standing you can verify from real sources (industry rankings, regulators, reputable deal databases, major press). Cite the standing source URL. **Never invent rankings** or "top firm" claims.
+2. **Open each company's official site** (and the most relevant product/service page). Record concrete observations on:
+   - Hierarchy (what leads the home page and why)
+   - Typography
+   - Nav structure and labels
+   - How they explain services or product
+   - Credibility signals (proof, people, data, press; only note what is actually on the page)
+   - CTAs (wording, placement, hard vs soft)
+3. **Decide what to adopt and what to avoid** for Spencer's project. Write it down (project `research/FINDINGS.md` or the brief). Patterns inform taste; they do not override this file's hard bans.
+4. **Never clone.** Do not copy layout systems, unique visual marks, wording, testimonials, metrics, or brand assets. Do not paste a competitor's IA onto our pages. Inform, then design something that still looks like Spencer's standard (white, ink, one sans, no AI tells).
+5. **Keep the research bounded.** Four to six firms is enough. Prefer official sites and cited ranking pages over secondary listicles. If standing cannot be verified, say so and pick another firm.
+6. **Credentials stay in the research.** Other firms' or companies' rankings and credentials are research inputs only and must never be presented as the client's own credentials. Leave proof or recognition sections out entirely until there is real, attributable proof.
+
+When handing off or reporting a new website, include the firm list with standing and site URLs, the adopt/avoid summary, and the path to the findings file. Confirm no borrowed credentials appear as the client's own, and that proof or recognition sections were left out unless the proof is real and attributable.
+
 ## 1. Hard bans (the "AI tells")
 
 Never ship any of these. Check for them before calling anything done.
@@ -194,13 +213,14 @@ The logged-in app, every interior page and the landing page share the same token
 - **New designs and redesigns: show options first.** Make 2–3 distinct options as a preview (HTML mockup or dev server), open it for Spencer, and implement only the one Spencer picks. Small tweaks get applied directly, then shown.
 - Don't propose full redesigns unprompted; they usually get reverted.
 - **Check before showing.** Screenshot every changed page at 390px and 1440px and fix overlap, crowding, off-center elements, skew, items too close to edges, and unrealistic device frames before reporting done. Then open it for Spencer.
-- New project: write a short `DESIGN.md` derived from this file (fonts, the one accent, ground color, signature hero background, assistant mascot) plus one theme file, and log rejected ideas there so they don't return.
+- New project: finish **§0 Sector research first** (findings saved with source URLs), then write a short `DESIGN.md` derived from this file (fonts, the one accent, ground color, signature hero background, assistant mascot, and the adopt/avoid notes from research) plus one theme file, and log rejected ideas there so they don't return.
 - Ship with accessibility: AA contrast, 44px tap targets, visible focus ring, reduced motion.
 
 ## 12. Pre-ship checklist
 
 Run this on every page before saying done:
 
+- [ ] New site: sector research done (4–6 verified leaders, findings path, adopt/avoid); no cloned competitor UI or invented rankings. Other firms' or companies' rankings and credentials are research inputs only and are never presented as the client's own. Proof or recognition sections are left out entirely until there is real, attributable proof.
 - [ ] Zero items from the section 1 ban list (search for `01`, `—`, `→`, `<hr`, `border-top`, `border-bottom`, `<em`, `italic`, purple hues, emoji).
 - [ ] No statement, feature or theme appears twice on the page.
 - [ ] Mostly white; at most one accent; at most one dark band; signature hero background in place.
