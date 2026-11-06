@@ -35,6 +35,11 @@ The rules come from a review of ~40 of Spencer's projects plus hundreds of Spenc
 - The most repeated complaints were: things looking "generic" or "AI", 01/02/03 numbering, tags above titles, pill tags, boxy layouts, too many words, repeated statements, off-center or overlapping elements on phones, logos with backgrounds around them, and arrows in buttons.
 - Full redesigns Spencer didn't ask for usually got reverted ("I like more how it currently looks"). "Make it less AI" means remove the AI tells, not invent a new identity.
 
+
+## Before any new website
+
+**Sector research first.** Before designing a new website (or a greenfield concept for a sector Spencer or a client does not already own a live site in), study **4–6 leading real companies** in that sector. Establish each company's standing from real sources (for law: Chambers, Legal 500, PitchBook/Carta/LSEG deal rankings, and similar; never invent rankings). Open their official sites, record concrete observations on hierarchy, typography, nav, how they explain services, credibility signals, and CTAs, then decide what to **adopt** and what to **avoid**. Use that research to inform the brief and `DESIGN.md`. **Never clone** a competitor's layout, copy, marks, or claims. Other firms' or companies' rankings and credentials are research inputs only and must never be presented as the client's own credentials. Leave proof or recognition sections out entirely until there is real, attributable proof. Save findings with the project (e.g. `research/FINDINGS.md`) and cite source URLs. Full procedure: [`spencer-web-style/SKILL.md`](spencer-web-style/SKILL.md) §0.
+
 ## The rule files
 
 - [`spencer-web-style/SKILL.md`](spencer-web-style/SKILL.md): websites, landing pages, web UI. The base layer.
