@@ -49,6 +49,8 @@ Never ship any of these. Check for them before calling anything done.
 - **Backgrounds behind logos, favicons or mascots** (see section 9).
 - **Emoji** as design or in UI copy.
 - **Gimmick motion:** bounce, typing effects, word-by-word reveals, particles, marquees, custom cursors, 3D tilt, magnetic buttons.
+- **Features that do nothing for the user.** Every control, card, setting, badge and toggle must change something the user can see and cares about. If removing it would change nothing for them, it does not ship. Internal plumbing (analytics consent, feature flags, sync status, debug state) is never presented as a feature. Before adding any UI, state in one line what the user gets from it; if that line is about us, not them, cut it.
+- **Orphaned controls.** When the surface that gave a control its meaning is removed, remove the control and its code in the same change. Removing a popup means removing the setting that only existed because of the popup. Search for what depended on it before calling the removal done.
 - **Fake content:** invented stats, testimonials, logos, user counts, placeholder grey bars, generic AI maps or illustrations, "Acme Corp" examples.
 - **Em dashes** (`—`) anywhere in copy. Use a comma, colon, period or middle dot `·`.
 - **Repetition:** a statement, feature, or the *theme* of a statement must never appear twice on a page, even reworded. If two sections make the same point, cut one.
@@ -221,6 +223,7 @@ The logged-in app, every interior page and the landing page share the same token
 Run this on every page before saying done:
 
 - [ ] New site: sector research done (4–6 verified leaders, findings path, adopt/avoid); no cloned competitor UI or invented rankings. Other firms' or companies' rankings and credentials are research inputs only and are never presented as the client's own. Proof or recognition sections are left out entirely until there is real, attributable proof.
+- [ ] Every control on the page does something the user can see and cares about; nothing left over from a removed feature.
 - [ ] Zero items from the section 1 ban list (search for `01`, `—`, `→`, `<hr`, `border-top`, `border-bottom`, `<em`, `italic`, purple hues, emoji).
 - [ ] No statement, feature or theme appears twice on the page.
 - [ ] Mostly white; at most one accent; at most one dark band; signature hero background in place.
