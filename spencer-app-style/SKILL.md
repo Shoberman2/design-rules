@@ -7,9 +7,9 @@ description: Spencer's house design standard for every app Spencer builds (iOS/S
 
 **Read [`ABOUT.md`](../ABOUT.md) first** (who Spencer is, the products, mascots and why these rules exist).
 
-**Load `spencer-web-style` first. Every rule there applies to apps too** (bans, color, type, pills, Title Case, 16px minimum, no lines as separators, no arrows in buttons, transparent logos, assistant, consistency, preview-first, check-before-showing). This file adds the app-specific rules and wins where the two differ (notably: apps always get dark mode).
+**Load `spencer-web-style` first. Every rule there applies to apps too** (bans, color, type, pills, Title Case, 16px minimum, no lines as separators, no arrows in buttons, transparent logos, assistant, consistency, preview-first, check-before-showing). This file adds the app-specific rules and wins where the two differ (notably: apps also offer a dark mode, which the person turns on).
 
-**The feel in one line:** a polished, native-feeling app with the website's brand: as few screens as possible, a named character to talk to, one clear action per screen, instant feedback on every tap, and a dark mode that looks as good as light.
+**The feel in one line:** a polished, native-feeling app with the website's brand: as few screens as possible, a named character to talk to, one clear action per screen, instant feedback on every tap, and a dark mode that looks as good as light when someone turns it on.
 
 Quality bar, in Spencer's words: *"like Triumph or any other app that's been designed and looks really good."*
 
@@ -69,9 +69,9 @@ Quality bar, in Spencer's words: *"like Triumph or any other app that's been des
 
 Decide per app and state the choice in the project's DESIGN.md. When an app uses it (Budtender, voiceTrivia), keep it simple: checkmarks, rankings, lists that fill up, satisfying feedback. When it doesn't (UTern, BookSaver), no streaks, points, badges, confetti or party emoji. Never gamify by default.
 
-## 8. Dark mode: always, and it must look good
+## 8. Dark mode: offered, never the default
 
-Every app ships light and dark, following the system setting with an override in the settings sheet. Dark is designed, not inverted.
+White is the standard background (Spencer, 2026-11-07: "keep the standard background white not black"). Every app opens light, even when the phone or computer is in dark mode. Every app still ships a designed dark mode that the person turns on in the settings sheet. It is designed, not inverted.
 
 ```css
 /* light: use the spencer-web-style tokens */
@@ -97,7 +97,7 @@ Every app ships light and dark, following the system setting with an override in
 ## 9. Platform specifics
 
 - **iOS/SwiftUI:** use the project font (Geist/Satoshi bundled) with Dynamic Type support; SF Symbols in regular/outline weights; 44pt minimum tap targets; respect safe areas; native sheets with `.presentationDetents`; haptics via `sensoryFeedback`.
-- **Expo/React Native:** same tokens in one theme file, `useColorScheme` for dark mode, native stack and sheet navigation, expo-haptics.
+- **Expo/React Native:** same tokens in one theme file, dark mode from the settings choice, not `useColorScheme` alone, native stack and sheet navigation, expo-haptics.
 - **Web apps and dashboards:** follow spencer-web-style fully, plus this file's structure, chat, feedback and dark-mode rules.
 
 ## 10. Business / enterprise apps
@@ -122,5 +122,5 @@ All of the spencer-web-style checklist that applies, plus:
 - [ ] One primary action per screen; no unneeded options.
 - [ ] Images correctly sized, accurate, realistic; nothing repeated in feeds/recommendations.
 - [ ] Gamification choice recorded in DESIGN.md and followed.
-- [ ] Dark mode designed and checked on every screen; light mode too.
+- [ ] Opens light (white) even on a device in dark mode; dark mode designed, offered in settings, and checked on every screen.
 - [ ] Opened in the simulator for Spencer.

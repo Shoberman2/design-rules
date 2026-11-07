@@ -79,7 +79,8 @@ Mostly white. Color carries meaning, never decoration.
 ```
 
 - **Accent:** default to none (ink). A brand may get **one** accent hue (e.g. UTern blue `#2563EB`, SparkTech gold `#b8860b`), used only for links, the primary button, focus and state. Never two accents.
-- **Dark:** marketing pages stay light. One dark band (footer CTA or a photo hero) is allowed when it clearly helps; use your judgment and keep it to one. Apps and logged-in products always ship a well-designed dark mode (see `spencer-app-style`), same token names under `:root[data-theme="dark"]`.
+- **White is the standard background, never black** (Spencer, 2026-11-07: "keep the standard background white not black"). Every page, app screen, mockup and preview renders on white by default, even when the viewer's device is in dark mode: do not switch to dark from `prefers-color-scheme` alone.
+- **Dark:** marketing pages stay light. One dark band (footer CTA or a photo hero) is allowed when it clearly helps; use your judgment and keep it to one. Apps and logged-in products still ship a well-designed dark mode (see `spencer-app-style`), same token names under `:root[data-theme="dark"]`, but only when the person picks it in settings.
 - **Images bring the color.** Photos, product screens and real content are where color lives.
 - All tokens in one theme file. Never hardcode hex in components.
 
@@ -163,6 +164,26 @@ Every site gets a full, real footer, not a single copyright line.
 
 Each brand owns one recognizable hero image or video (UTern's mountain, BallotWatch's Capitol, Leed's opening doors, oasisVRX's venue footage). It sits behind the hero (and optionally the closing CTA band), with a soft scrim so centered white or ink text stays AA-readable. Everything else on the page stays white. Inside the logged-in app, backgrounds stay plain white unless the project says otherwise.
 
+## 5e. Standard screens
+
+Two screens look the same in every product. Build them this way unless the project's DESIGN.md says otherwise.
+
+**Sign in and sign up ("Open Page", 2026-11-07).**
+- No card and no box around the form. No Sign in / Sign up tab toggle.
+- Centered column, about 380px wide: the mascot face (no background), a Title Case heading ("Welcome Back"), one short line under it.
+- "Continue with Google" (and Apple when the product has it) first, as a soft-filled pill. Then "or with email" as plain small text, never between divider lines.
+- Each field has a small label above it, a soft fill (`--surface-dim`), no border, 16px radius, at least 52px tall, and a focus ring in the accent.
+- One primary pill with words only ("Sign in", "Create account"). Under it, plain text links: "Forgot password?" and "New here? Sign up" or "Have an account? Sign in".
+
+**An opportunity, listing or item ("Facts First", 2026-11-07).** The same layout for every type (internship, part time, new grad, fellowship, research, a product, a place):
+- Header: logo, title, the company or owner, then share and close.
+- A strip of four facts, always in the same order and place. For a role that is When, Where, Pay and Closes (or Usually opens). A missing fact says "Not listed"; it never disappears.
+- One line on what it is.
+- "About" is open by default and easy to read: short paragraphs, bullet lists under plain headings (What you'll do, What they ask for), 16px or more, about 70ch wide. Never a wall of text.
+- Everything else is folded underneath, one row each (Why it fits you, history, more details).
+- Apply (primary pill) and Ask the assistant (secondary pill) stay pinned at the bottom.
+- In lists, one row per item: title, then "Company · Where · When · Pay".
+
 ## 6. Copy
 
 - Fewest words possible. If a word doesn't add value, cut it. Headlines under ~8 words, supporting lines one sentence.
@@ -226,6 +247,7 @@ Run this on every page before saying done:
 - [ ] Every control on the page does something the user can see and cares about; nothing left over from a removed feature.
 - [ ] Zero items from the section 1 ban list (search for `01`, `—`, `→`, `<hr`, `border-top`, `border-bottom`, `<em`, `italic`, purple hues, emoji).
 - [ ] No statement, feature or theme appears twice on the page.
+- [ ] White background by default, also on a device in dark mode; sign-in and item screens follow 5e.
 - [ ] Mostly white; at most one accent; at most one dark band; signature hero background in place.
 - [ ] One font family (+ mono for numbers); headlines big, tight, Title Case; emphasis by weight; brand names spelled exactly.
 - [ ] No text under 16px outside dense app chrome.
