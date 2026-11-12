@@ -187,6 +187,9 @@ Two screens look the same in every product. Build them this way unless the proje
 ## 6. Copy
 
 - Fewest words possible. If a word doesn't add value, cut it. Headlines under ~8 words, supporting lines one sentence.
+- **Headlines are about four words** when they sit over a visual ("Your Career Starts Here."). If Spencer says "make this simpler", cut the headline to one short clause before touching anything else.
+- **A printed number carries its source.** Any figure on a page (a cost, a count, a benchmark) shows where it came from and which parts are our own assumptions, in a quiet line or a "How we got this" fold beside it. Our own arithmetic is labelled as our estimate, never as a study. A comparison ("less than", "cheaper") needs both numbers on the page.
+- **Say what the product covers, all of it.** When a product serves more than one group or season (interns and new grads, year round), copy names them all; never the narrowest one alone.
 - Plain, blunt, confident. Sounds like a person talking, not a pitch.
 - No ambiguous terms, no internal jargon. Labels name the outcome ("Prepare application", not "Run agent").
 - **Examples use the real brand and are vivid.** Demo data, sample rooms and example stories use the actual product and company (UTern, not "Acme Software") and are captivating, not bland ("a crazy story", not "the district gave a bus contract to a cousin").

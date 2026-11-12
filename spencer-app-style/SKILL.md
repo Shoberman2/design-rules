@@ -64,6 +64,9 @@ Quality bar, in Spencer's words: *"like Triumph or any other app that's been des
 - **Feeds look like real posts** in one standard format (who, what, the item, the reaction). When the feed is empty, show clearly labeled preview posts, never fake ones presented as real.
 - Lists use settings-style rows: small label over a 16px+ value, separated by space, not lines.
 - Empty states are specific to the screen and point to the one next action.
+- **Never an empty screen over data you have.** If a filter or a goal leaves nothing, show the nearest things that do exist and say plainly why they are a weak match. "Found 6, none close" over a blank page is a bug.
+- **Tools sit above the work.** Whatever a person needs to start (drawing tools, the run button, the composer) is in view without scrolling, and the canvas or editor fits the window. A blank box with its tools below the fold reads as broken.
+- **One continuous nav.** A rail or tab bar of five or fewer items is one list. No "More" disclosure and no gap that splits it in two.
 
 ## 7. Gamification: per app
 
@@ -103,6 +106,8 @@ White is the standard background (Spencer, 2026-11-07: "keep the standard backgr
 ## 10. Business / enterprise apps
 
 Professional and minimal. Pipelines (candidates, tips, orders) use a board with columns (e.g. Sourced, Interviewing, Offer) that open into detail sheets. Information as settings-style rows, not boxes. Same brand, calmer: no signature animations, no gamification.
+
+**List views and a path (2026-11-11, "design it like Salesforce").** Records a person scans (roles, people, orders) are table rows under plain sentence-case column headings, with the pipeline as number columns read down the page, 13 to 14px, tabular numbers, a hairline between rows. The name in the first column opens the record. An open record shows one path across the top: every stage with its count, stages passed in the light accent, the furthest stage reached in the solid accent. On a phone the number columns drop and the path wraps. This is a restrained pass on the existing platform, never a rebuild.
 
 ## 11. Shipping
 
