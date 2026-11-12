@@ -214,7 +214,22 @@ Every visual must explain something. If an image doesn't convey what the product
 - Product screens go in a **realistic device frame** when shown as a phone or laptop (correct notch, status bar, proportions; nothing overlapping).
 - A raw screenshot alone is not enough: pair it with a short statement, or use a very simple diagram with real words that shows the concept (e.g. a line sweeping a map with dots where clusters appear).
 - Workflows flow horizontally or diagonally as one connected visual, never as numbered boxes or a list of steps.
-- **As realistic as possible** whenever depicting real things (products, places, devices). No AI-looking illustrations, stock-art people, generic maps or emoji.
+- **As realistic as possible** whenever depicting real things (products, places, devices). No AI-looking illustrations, stock-art people, generic maps or emoji. People appear only in the people-video form below (8a).
+
+### 8a. People video ("A Person And A Message", 2026-11-11)
+
+The one sanctioned way to show people. Spencer on UTern: "I love the style of video you made." Use it to explain a feature without showing the product's screen.
+
+- **What it is:** a short clip of one person in their own day (on their phone on campus, behind a counter, at a desk), and the assistant's messages arriving over the footage. The person carries the feeling; the messages say what the product did.
+- **The footage:** one continuous shot, 6 seconds, looping, silent. Photoreal, warm natural light (golden hour, a window), shallow depth of field, gentle or no camera move. The person sits on one third of the frame; the other half is soft background, left free for the messages. A different person in every clip, same grade across the set.
+- **Never in the footage:** product screens, text, captions, logos, readable signs. Phone and laptop screens face away.
+- **The messages:** real HTML over the video, never baked in. Three lines per clip: the assistant, the person's short reply, the assistant again. The assistant's bubble is dark glass (blur) with the mascot's head and name; the person's reply is the brand accent, on the right. Lines arrive one at a time, the newest two stay (the older one dimmed), then the conversation rests and starts again.
+- **Every line is true:** it says only what the product does. No invented numbers, companies or outcomes.
+- **Generated people are not customers.** Clips may be AI-generated; say so in the code, and never present the person as a user, a testimonial or a real student.
+- **Sizes:** one wide clip (16:9, the hero's corner radius) under a short Title Case headline of about four words; then one clip per feature, filling that feature's frame (16:9, 4:3 on a phone). The first clip may be higher quality than the rest.
+- **Build:** H.264 mp4 with faststart, no audio track, a JPEG poster, `muted playsInline loop preload="none"`. Play only while in view. Rows at 1280px wide, about 400 to 600 KB each. With reduced motion: the poster and all three lines, no animation. One hidden line of text gives a screen reader the whole exchange once.
+- **Take the idea, not the site.** When another site inspires this, bring over only the people-and-message idea: not its nav, layout, colors, type or cast.
+- **Prompt recipe:** "Photoreal cinematic lifestyle footage, one continuous shot, natural skin and motion. [Who, age, clothes] [where] [one small action ending in a smile or nod]. Medium shot, [light], shallow depth of field. They are on the right side of the frame; the left half is soft out of focus background. Phone screen not visible. No text, no captions, no logos, no readable signage, no on-screen graphics."
 
 ## 9. Brand assets and the live assistant
 
