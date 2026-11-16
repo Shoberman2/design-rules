@@ -217,7 +217,7 @@ Every visual must explain something. If an image doesn't convey what the product
 - Product screens go in a **realistic device frame** when shown as a phone or laptop (correct notch, status bar, proportions; nothing overlapping).
 - A raw screenshot alone is not enough: pair it with a short statement, or use a very simple diagram with real words that shows the concept (e.g. a line sweeping a map with dots where clusters appear).
 - Workflows flow horizontally or diagonally as one connected visual, never as numbered boxes or a list of steps.
-- **As realistic as possible** whenever depicting real things (products, places, devices). No AI-looking illustrations, stock-art people, generic maps or emoji. People appear only in the people-video form below (8a).
+- **As realistic as possible** whenever depicting real things (products, places, devices). No AI-looking illustrations, stock-art people, generic maps or emoji. On product marketing sites, people appear only in the people-video form below (8a). On a client redesign or mockup, keep the business's own photos, including team photos (8b).
 
 ### 8a. People video ("A Person And A Message", 2026-11-11)
 
@@ -233,6 +233,18 @@ The one sanctioned way to show people. Spencer on UTern: "I love the style of vi
 - **Build:** H.264 mp4 with faststart, no audio track, a JPEG poster, `muted playsInline loop preload="none"`. Play only while in view. Rows at 1280px wide, about 400 to 600 KB each. With reduced motion: the poster and all three lines, no animation. One hidden line of text gives a screen reader the whole exchange once.
 - **Take the idea, not the site.** When another site inspires this, bring over only the people-and-message idea: not its nav, layout, colors, type or cast.
 - **Prompt recipe:** "Photoreal cinematic lifestyle footage, one continuous shot, natural skin and motion. [Who, age, clothes] [where] [one small action ending in a smile or nod]. Medium shot, [light], shallow depth of field. They are on the right side of the frame; the left half is soft out of focus background. Phone screen not visible. No text, no captions, no logos, no readable signage, no on-screen graphics."
+
+### 8b. Redesigns: keep and upgrade the client's real media (2026-11-15)
+
+Spencer, on SparkTech mockups: keep the images and videos in the new version; it shouldn't look bare, and it should look even better.
+
+- **Keep their media, and make it look better.** Every redesign or mockup keeps the business's own images and videos from the current site: logo, storefront or interior, team, work and gallery photos, and any embedded video. The new version must never look bare, and must look clearly better than the original.
+- **Fill the page with their photos.** Use a full-bleed real photo hero with a dark scrim (a gradient overlay on the photo only, so text stays AA-readable; this is not a decorative page gradient). Add photo sections or galleries. Design mobile-first, and check at 390px and 1440px.
+- **Upgrade low-res originals.** Upscale or sharpen weak photos (Higgsfield upscale using existing credits only, never buy more; or a local sharpen). Crop out baked-in dated banners, borders and text.
+- **Skip junk media.** Leave out tiny icons, spacers, dated banner GIFs and typography collages. Don't mix stock or model shots next to real interiors.
+- **Never invent the business.** Do not create fake photos of the shop, its staff or its work. Generic textures or quiet fills are fine when you need a ground. If a site has under about 4 usable photos, flag it as thin.
+- **Don't guess names.** Don't caption staff photos with names unless the name is confirmed, so no one is misidentified.
+- **Pre-ship for redesigns and mockups:** every image loads; no text runs edge to edge (keep at least 20px side padding on mobile); real services, hours, phone and address are kept.
 
 ## 9. Brand assets and the live assistant
 
@@ -277,6 +289,7 @@ Run this on every page before saying done:
 - [ ] Full multi-column footer with socials; every footer link opens a real, themed page (no `#`, no 404s).
 - [ ] Sections separated by space, not lines or boxes.
 - [ ] Every visual is real, explains something, and device frames look real.
+- [ ] Client redesign or mockup (8b): the business's own photos and videos are kept and upgraded; the page does not look bare and looks clearly better than the original; no invented photos of the business, staff or work; every image loads; at least 20px side padding on mobile; real services, hours, phone and address are kept. Flag the brief if there are under about 4 usable photos.
 - [ ] Logos, favicon and mascot have no background or padding.
 - [ ] Bottom-right assistant is a round face only and actually answers questions about the product.
 - [ ] Loading states appear instantly, show checkmarked steps, appear once.
