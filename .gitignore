@@ -1,2 +1,4 @@
 .digest.log
 .DS_Store
+# Weekly digests quote private chats: they stay on this Mac.
+feedback/*.md
