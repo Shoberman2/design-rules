@@ -48,7 +48,7 @@ Never ship any of these. Check for them before calling anything done.
 - **Purple / violet / indigo** anywhere, gradients, glows, blobs, radial spotlights, grain, decorative waves.
 - **Backgrounds behind logos, favicons or mascots** (see section 9).
 - **Emoji** as design or in UI copy.
-- **Gimmick motion:** bounce, typing effects, word-by-word reveals, particles, marquees, custom cursors, 3D tilt, magnetic buttons.
+- **Gimmick motion:** bounce, typing effects, word-by-word reveals, particles, marquees, custom cursors, 3D tilt, magnetic buttons. One exception: a single showcase object Spencer asks for, like the SparkTech membership card (see 4a), may lean toward the pointer.
 - **Features that do nothing for the user.** Every control, card, setting, badge and toggle must change something the user can see and cares about. If removing it would change nothing for them, it does not ship. Internal plumbing (analytics consent, feature flags, sync status, debug state) is never presented as a feature. Before adding any UI, state in one line what the user gets from it; if that line is about us, not them, cut it.
 - **Orphaned controls.** When the surface that gave a control its meaning is removed, remove the control and its code in the same change. Removing a popup means removing the setting that only existed because of the popup. Search for what depended on it before calling the removal done.
 - **Fake content:** invented stats, testimonials, logos, user counts, placeholder grey bars, generic AI maps or illustrations, "Acme Corp" examples.
@@ -78,7 +78,8 @@ Mostly white. Color carries meaning, never decoration.
 }
 ```
 
-- **Accent:** default to none (ink). A brand may get **one** accent hue (e.g. UTern blue `#2563EB`, SparkTech gold `#b8860b`), used only for links, the primary button, focus and state. Never two accents.
+- **Accent:** default to none (ink). A brand may get **one** accent hue (e.g. UTern blue `#2563EB`, SparkTech gold `#ffd15c`), used only for links, the primary button, focus and state. Never two accents.
+- **The accent is the favicon's color** (2026-11-21). The logo in the nav and footer, the accent and every button use exactly the color of the browser-tab icon. If the favicon is brighter than the site, the site moves to the favicon, not the other way round.
 - **White is the standard background, never black** (Spencer, 2026-11-07: "keep the standard background white not black"). Every page, app screen, mockup and preview renders on white by default, even when the viewer's device is in dark mode: do not switch to dark from `prefers-color-scheme` alone.
 - **Dark:** marketing pages stay light. One dark band (footer CTA or a photo hero) is allowed when it clearly helps; use your judgment and keep it to one. Apps and logged-in products still ship a well-designed dark mode (see `spencer-app-style`), same token names under `:root[data-theme="dark"]`, but only when the person picks it in settings.
 - **Images bring the color.** Photos, product screens and real content are where color lives.
@@ -109,11 +110,21 @@ body { font-size: 17px; line-height: 1.6; color: var(--ink-2); }
 
 - **Centered:** the hero, every big statement, and every CTA group. **Left-aligned:** body paragraphs, lists, forms and app content.
 - **Buttons are pills** (`border-radius: 999px`), like live UTern. Solid ink (or the one accent) for primary, outlined/ghost pill for secondary. Padding about `14px 26px`, weight 500, words only (no arrows, no icons), a `translateY(-1px)` lift on hover, no shadow at rest. Every button on the site, landing and app, uses the same button component.
+- **Buttons look finished** (2026-11-21, "make the buttons look stylish"): on a dark ground the primary pill gets a soft 1px light edge along its top and a warm glow of its own color on hover; the secondary pill is clear glass (a light blur) with a fine light edge that fills solid on hover. Weight 600. Still words only, still one component.
+- **A button inside a field fills it** (2026-11-17). When a button shares a pill with an input (a search or ZIP field, a chat composer), the button is the full height of that field and sits flush in its end. Never leave a ring of the field's background around the button.
 - Radius: inputs 12px, cards and media frames 16–24px, sheets/modals 24px, big hero media 28–40px.
 - Shadows: soft and rare. `0 1px 2px rgba(20,20,15,.04), 0 12px 32px rgba(20,20,15,.06)`.
 - Space is the separator. Section padding `clamp(96px, 12vw, 160px)`. Gaps between items 24–48px. 4px base grid. Never crowded, never touching the bottom edge of a section or viewport.
 - Content width 1180px max, gutter `clamp(20px, 5vw, 56px)`. Reading columns 680–760px.
 - Icons: Lucide outline, small, only when they carry meaning (never inside buttons).
+
+### 4a. A showcase card (2026-11-21, SparkTech)
+
+When a price or plan is shown as a card, it is an object, not a box of bullet points:
+- It is a real membership card, at a high level: card proportions (1.586:1), the site's colors as its material (for SparkTech, black brushed metal with gold foil type), a real EMV chip and contactless mark, the real logo, a fine accent edge, and a visible edge with thickness when it turns. A back face (stripe, signature panel, the site's address) shows when it is clicked or tapped.
+- It sits level, never rotated at rest.
+- **The whole card moves, not the light** (Spencer, 2026-11-21: "I want the card to actually move, not the light or a gradient in the card. I don't like that at all"). It turns (about 18°) and drifts toward the pointer anywhere in its section, eased so it feels weighted, and its shadow on the ground moves the other way. All lighting on the card is fixed. No glare, spotlight or gradient that follows the pointer, and nothing inside the card moves on its own. A finger drag works on a phone. It settles flat when the pointer leaves, and only flips (no turning) with reduced motion.
+- It carries only a name and, when Spencer wants it shown, the price (e.g. "$500 / month"). No feature list on or under it. One button below it.
 
 ## 5. Landing page shape
 
@@ -123,7 +134,7 @@ The landing page is **marketing only**: it explains the product and gets people 
 2. **Hero:** centered. One short Title Case statement (the promise), one supporting line at most, one primary pill CTA (optional secondary pill). Behind it, the brand's **signature background** (see 5d). No tags above it.
 3. **Statement sections:** one idea each, alternating text and visual. Short centered H2, one or two short lines, then a visual that explains (section 8). Each section ends in a clear next step.
 4. **Proof** only if it is real.
-5. **FAQ:** plain question/answer pairs separated by space, no cards, no lines.
+5. **FAQ: always a dropdown** (Spencer, 2026-11-21: "it should always be like that"). One question per row, closed by default, opening to its answer. Use native `<details>`/`<summary>` so it works without JavaScript and with a keyboard, and the answers stay in the HTML for search. Rows are separated by space (a quiet fill per row is fine), never lines. An accent plus at the row's end turns into a minus when open. Add FAQPage structured data.
 6. **Closing CTA band:** one strong statement + the primary pill, centered. The one dark band, if used, usually lives here.
 7. **Footer** (see 5b).
 
@@ -131,6 +142,7 @@ Marketing rules:
 - Never show signed-in state on the landing page: no "Sign out", no account menu, no app-only features in the nav. Visiting the landing page never feels logged in.
 - Audience-specific or deep content gets **its own page** ("For Businesses", "How It Works", "Pricing", "For Schools"), not crammed onto the homepage.
 - An app (iOS or web app) never contains a marketing landing page; it opens to sign-in or the product.
+- **Developer features get a "For Developers" page** (2026-11-17). An API, an MCP server, SDKs, open data and anything else built for developers or AI agents is explained on one "For developers" page, linked by that name in the nav and footer. It never gets a section on the landing page, which explains only the features an everyday reader uses.
 
 ### 5a. Nav: always good, always easy
 
@@ -146,9 +158,11 @@ Marketing rules:
 
 Every site gets a full, real footer, not a single copyright line.
 
-- Top: wordmark + one line about the product + the primary pill CTA (or an email signup if that's the conversion).
-- Then 3–5 link columns with plain headings, grouped by intent, e.g. **Product** (Features, Pricing, How it works, Changelog), **Company** (About, Careers, Contact, Press), **Resources** (FAQ, Help center, Blog/Guides), **Legal** (Privacy, Terms, Cookies, Security).
-- Bottom: © year + company name, every real social account linked (small outline icons), and contact (link to the contact page or "Book a call"; don't print raw emails unless the project says to).
+- **No CTA button and no tagline in the footer** (Spencer, 2026-11-21: "Don't put a CTA in the footer"). The closing band above it carries the call to action.
+- 4–5 link columns with plain 16px headings, grouped by intent, e.g. **Product** (Features, Pricing, How it works, Changelog), **Company** (About, Careers, Contact, Press), **Resources** (FAQ, Help center, Blog/Guides). The group of columns is centered under the page.
+- **Legal is its own column** (Privacy, Terms, Sitemap, plus Cookies or Security when they exist), never a loose row of links at the bottom, where it looks out of place.
+- Every page on the site appears in the footer.
+- Bottom: the logo (the favicon mark, no background) beside "© year Legal Entity Name", centered, nothing else. Social accounts go in the Contact column as plain links; don't print raw emails unless the project says to.
 - Columns are separated by space, never lines. Generous padding top and bottom. Same tokens as the page; may sit on `--surface-dim` or be the one dark band.
 - **Every footer link goes to a real, built page.** Never `#`, never a dead link. If a linked page doesn't exist, create it in the same theme: same nav, same footer, same type and spacing, real content (legal pages get real reasonable policy text marked for review; About/Contact get honest copy, no invented team or stats). If a page truly shouldn't exist yet, drop the link instead.
 - Mobile: columns stack into a 2-column grid, then 1; links stay 44px tappable.
@@ -286,7 +300,9 @@ Run this on every page before saying done:
 - [ ] Sticky full-width nav with plain-word links, active state, Sign in + Sign up top right, and a working mobile menu.
 - [ ] Landing page shows no signed-in state; deep or audience content lives on its own pages.
 - [ ] CTA in the nav, the hero and a closing band; every interior page ends with one; all CTAs work and don't change after load.
-- [ ] Full multi-column footer with socials; every footer link opens a real, themed page (no `#`, no 404s).
+- [ ] Full multi-column footer, centered, with Legal as its own column, no CTA button, and only the logo with © at the bottom; every footer link opens a real, themed page (no `#`, no 404s).
+- [ ] Every FAQ is a dropdown (`<details>`), separated by space, with FAQPage structured data.
+- [ ] Logo, accent and buttons are the favicon's exact color.
 - [ ] Sections separated by space, not lines or boxes.
 - [ ] Every visual is real, explains something, and device frames look real.
 - [ ] Client redesign or mockup (8b): the business's own photos and videos are kept and upgraded; the page does not look bare and looks clearly better than the original; no invented photos of the business, staff or work; every image loads; at least 20px side padding on mobile; real services, hours, phone and address are kept. Flag the brief if there are under about 4 usable photos.
